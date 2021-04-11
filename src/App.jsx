@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
-import { CssBaseline, ThemeProvider } from '@material-ui/core'
+import { Container, CssBaseline, ThemeProvider } from '@material-ui/core'
 import { DarkModeContext } from './context/themeContext'
 import styles from './styles'
 import darkTheme from './DarkTheme'
@@ -22,7 +22,11 @@ const App = () => {
         <Navbar />
 
         <Switch>
-          <main className={darkMode ? classes.dark : classes.light}></main>
+          <main className={darkMode ? classes.dark : classes.light}>
+            <Container maxWidth='lg'>
+              <span>Some text</span>
+            </Container>
+          </main>
         </Switch>
       </ThemeProvider>
     </Router>

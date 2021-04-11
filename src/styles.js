@@ -3,13 +3,13 @@ import { makeStyles } from '@material-ui/core'
 const useStyles = makeStyles({
   dark: {
     minHeight: '100vh',
-    backgroundColor: '#121212',
+    backgroundColor: '#18191a',
     margin: 0,
   },
 
   light: {
     minHeight: '100vh',
-    backgroundColor: 'white',
+    backgroundColor: '#fafafa',
     margin: 0,
   },
 })

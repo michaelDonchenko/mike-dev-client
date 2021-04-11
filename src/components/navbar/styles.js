@@ -1,18 +1,23 @@
 import { makeStyles } from '@material-ui/core'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   darkNav: {
     padding: 0,
     margin: 0,
-    backgroundColor: '#181818',
+    backgroundColor: '#242526',
     display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    maxWidth: '100%',
   },
 
   lightNav: {
     padding: 0,
     margin: 0,
-    backgroundColor: '#dbe2ef',
+    backgroundColor: '#fafafa',
     display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 
   toolBar: {
@@ -21,6 +26,44 @@ const useStyles = makeStyles({
     display: 'flex',
     margin: '0 auto',
   },
-})
+
+  rightDiv: {
+    flex: 0,
+    display: 'flex',
+  },
+
+  leftDiv: {
+    flex: 1,
+    display: 'flex',
+  },
+
+  navButton: { margin: theme.spacing(0, 4), padding: theme.spacing(0, 3) },
+
+  icon: {
+    fontSize: '1.8rem',
+  },
+
+  navLinkDark: {
+    color: 'white',
+    textDecoration: 'none',
+    fontSize: '18px',
+    margin: theme.spacing(0, 2),
+    '&:hover': {
+      color: '#ff165d',
+      cursor: 'pointer',
+    },
+  },
+
+  navLinkLight: {
+    color: '#26a69a',
+    textDecoration: 'none',
+    fontSize: '18px',
+    margin: theme.spacing(0, 2),
+    '&:hover': {
+      color: '#00bcd4',
+      cursor: 'pointer',
+    },
+  },
+}))
 
 export default useStyles
