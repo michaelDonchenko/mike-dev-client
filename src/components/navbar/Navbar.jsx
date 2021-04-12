@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <AppBar
       className={darkMode ? classes.darkNav : classes.lightNav}
-      position='fixed'
+      position='static'
     >
       <Hidden smUp>
         <Button

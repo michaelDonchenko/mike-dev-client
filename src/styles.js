@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   dark: {
     minHeight: '100vh',
     backgroundColor: '#18191a',
@@ -12,6 +12,12 @@ const useStyles = makeStyles({
     backgroundColor: '#fafafa',
     margin: 0,
   },
-})
+
+  mainContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    paddingTop: theme.spacing(4),
+  },
+}))
 
 export default useStyles
