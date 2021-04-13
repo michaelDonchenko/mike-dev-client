@@ -1,16 +1,22 @@
-import { Typography } from '@material-ui/core'
+import { Button, Typography } from '@material-ui/core'
 import React from 'react'
 import styles from './styles'
-import { useSpring, animated } from 'react-spring'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const Home = (props) => {
   const { width, darkMode } = props
   const classes = styles()
-  const animation = useSpring({ opacity: 1, from: { opacity: 0 } })
 
   return (
-    <div className={classes.flexCenter}>
-      <animated.div style={animation} className={classes.flexDiv}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.8 }}
+      className={classes.flexCenter}
+    >
+      <div className={classes.flexDiv}>
         <Typography
           className={classes.header}
           variant={width < 700 ? 'h4' : 'h3'}
@@ -34,8 +40,24 @@ const Home = (props) => {
         >
           Welcome to my world
         </Typography>
-      </animated.div>
-    </div>
+      </div>
+
+      <div className={classes.flexCenter}>
+        <Typography variant='subtitle1' align='center'>
+          Do you like what you see?
+        </Typography>
+
+        <Link to='/contact' className={classes.link}>
+          <Button
+            className={classes.hireButton}
+            variant='outlined'
+            color='primary'
+          >
+            Hire me now
+          </Button>
+        </Link>
+      </div>
+    </motion.div>
   )
 }
 

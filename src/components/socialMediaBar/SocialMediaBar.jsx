@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import styles from './styles'
 import { DarkModeContext } from '../../context/themeContext'
 import Tooltip from '@material-ui/core/Tooltip'
+import { motion } from 'framer-motion'
 
 const SocialMediaBar = () => {
   const classes = styles()
@@ -11,33 +12,45 @@ const SocialMediaBar = () => {
   return (
     <Toolbar className={classes.toolBar}>
       <Tooltip placement='left-start' title='Linkedin'>
-        <a
+        <motion.a
           className={darkMode ? classes.iconDarkMode : classes.iconLightMode}
           href='https://www.linkedin.com/in/michael-donchenko-39aa711b3/'
-          target='blank'
+          target='_blank'
+          rel='noreferrer'
+          whileHover={{ scale: 1.5 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.3 }}
         >
           <i class='fab fa-linkedin'></i>
-        </a>
+        </motion.a>
       </Tooltip>
 
       <Tooltip placement='left-start' title='Github'>
-        <a
+        <motion.a
           className={darkMode ? classes.iconDarkMode : classes.iconLightMode}
           href='https://github.com/michaelDonchenko'
-          target='blank'
+          target='_blank'
+          rel='noreferrer'
+          whileHover={{ scale: 1.5 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.3 }}
         >
           <i class='fab fa-github'></i>
-        </a>
+        </motion.a>
       </Tooltip>
 
       <Tooltip placement='left-start' title='Youtube'>
-        <a
+        <motion.a
           className={darkMode ? classes.iconDarkMode : classes.iconLightMode}
           href='https://www.youtube.com/channel/UCnOX2mLQzn3GE8Vzrddtx3g'
-          target='blank'
+          target='_blank'
+          rel='noreferrer'
+          whileHover={{ scale: 1.5 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.3 }}
         >
           <i class='fab fa-youtube'></i>
-        </a>
+        </motion.a>
       </Tooltip>
     </Toolbar>
   )

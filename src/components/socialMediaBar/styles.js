@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
 
   iconDarkMode: {
     textDecoration: 'none',
-    fontSize: '40px',
+    fontSize: '35px',
     color: 'white',
     '&:hover': {
       color: '#ff165d',
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   iconLightMode: {
     textDecoration: 'none',
     fontSize: '40px',
-    color: '#26a69a',
+    color: '#18191a',
     '&:hover': {
       color: '#00bcd4',
     },

@@ -55,12 +55,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   navLinkLight: {
-    color: '#26a69a',
+    color: '#00bcd4',
     textDecoration: 'none',
     fontSize: '18px',
     margin: theme.spacing(0, 2),
+
     '&:hover': {
-      color: '#00bcd4',
+      color: '#26a69a',
       cursor: 'pointer',
     },
   },
