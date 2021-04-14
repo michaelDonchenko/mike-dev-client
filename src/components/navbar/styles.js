@@ -27,6 +27,13 @@ const useStyles = makeStyles((theme) => ({
     margin: '0 auto',
   },
 
+  mobileToolBar: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '0 auto',
+  },
+
   rightDiv: {
     flex: 0,
     display: 'flex',
@@ -47,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     textDecoration: 'none',
     fontSize: '18px',
-    margin: theme.spacing(0, 2),
+    margin: theme.spacing(0, 1.2),
     '&:hover': {
       color: '#ff165d',
       cursor: 'pointer',
@@ -58,12 +65,26 @@ const useStyles = makeStyles((theme) => ({
     color: '#00bcd4',
     textDecoration: 'none',
     fontSize: '18px',
-    margin: theme.spacing(0, 2),
+    margin: theme.spacing(0, 1.2),
 
     '&:hover': {
       color: '#26a69a',
       cursor: 'pointer',
     },
+  },
+
+  mobileNavLinkDark: {
+    color: 'white',
+    textDecoration: 'none',
+    fontSize: '22px',
+    margin: theme.spacing(4, 0),
+  },
+
+  mobileNavLinkLight: {
+    color: '#00bcd4',
+    textDecoration: 'none',
+    fontSize: '22px',
+    margin: theme.spacing(4, 0),
   },
 }))
 

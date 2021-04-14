@@ -5,14 +5,14 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    margin: theme.spacing(6, 0),
+    margin: theme.spacing(4, 0),
     width: '100%',
   },
 
   flexDiv: {
     display: 'flex',
     flexDirection: 'column',
-    margin: theme.spacing(6, 0, 12, 0),
+    margin: theme.spacing(4, 0, 12, 0),
   },
 
   headerDark: {

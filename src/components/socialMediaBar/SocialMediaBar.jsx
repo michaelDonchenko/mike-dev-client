@@ -19,7 +19,7 @@ const SocialMediaBar = () => {
           rel='noreferrer'
           whileHover={{ scale: 1.5 }}
           whileTap={{ scale: 0.9 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2 }}
         >
           <i class='fab fa-linkedin'></i>
         </motion.a>
@@ -33,7 +33,7 @@ const SocialMediaBar = () => {
           rel='noreferrer'
           whileHover={{ scale: 1.5 }}
           whileTap={{ scale: 0.9 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2 }}
         >
           <i class='fab fa-github'></i>
         </motion.a>
@@ -47,7 +47,7 @@ const SocialMediaBar = () => {
           rel='noreferrer'
           whileHover={{ scale: 1.5 }}
           whileTap={{ scale: 0.9 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2 }}
         >
           <i class='fab fa-youtube'></i>
         </motion.a>

@@ -36,6 +36,7 @@ const ToolBar = () => {
           >
             Mike dev
           </NavLink>
+
           <NavLink
             className={darkMode ? classes.navLinkDark : classes.navLinkLight}
             to='/projects'
@@ -44,6 +45,7 @@ const ToolBar = () => {
           >
             Projects
           </NavLink>
+
           <NavLink
             className={darkMode ? classes.navLinkDark : classes.navLinkLight}
             to='/youtube'
@@ -52,6 +54,7 @@ const ToolBar = () => {
           >
             Youtube
           </NavLink>
+
           <NavLink
             className={darkMode ? classes.navLinkDark : classes.navLinkLight}
             to='/contact'
@@ -59,6 +62,15 @@ const ToolBar = () => {
             activeStyle={activeStyle}
           >
             Contact
+          </NavLink>
+
+          <NavLink
+            className={darkMode ? classes.navLinkDark : classes.navLinkLight}
+            to='/about'
+            exact
+            activeStyle={activeStyle}
+          >
+            About
           </NavLink>
         </Hidden>
       </div>

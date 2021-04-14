@@ -5,12 +5,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
   },
 
   iconDarkMode: {
     textDecoration: 'none',
-    fontSize: '35px',
+    fontSize: '25px',
+    marginRight: theme.spacing(4),
     color: 'white',
     '&:hover': {
       color: '#ff165d',
@@ -19,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
 
   iconLightMode: {
     textDecoration: 'none',
-    fontSize: '40px',
+    fontSize: '25px',
+    marginRight: theme.spacing(4),
     color: '#18191a',
     '&:hover': {
       color: '#00bcd4',

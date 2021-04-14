@@ -12,12 +12,13 @@ import SocialMediaBar from './components/socialMediaBar/SocialMediaBar'
 import Projects from './pages/projects/Projects'
 import { AnimatePresence } from 'framer-motion'
 import Footer from './components/footer/Footer'
+import Youtube from './pages/youtube/Youtube'
 
 const App = () => {
   const { state } = useContext(DarkModeContext)
   const { darkMode } = state
   const classes = styles()
-  const [width, setWidth] = useState(window)
+  const [width, setWidth] = useState(window.innerWidth)
 
   const handleWithChange = () => {
     setWidth(window.innerWidth)
@@ -25,7 +26,6 @@ const App = () => {
 
   useEffect(() => {
     window.addEventListener('resize', handleWithChange)
-    return () => window.removeEventListener('resize', handleWithChange)
   }, [])
 
   return (
@@ -50,6 +50,14 @@ const App = () => {
                   path='/projects'
                   component={() => (
                     <Projects width={width} darkMode={darkMode} />
+                  )}
+                />
+
+                <Route
+                  exact
+                  path='/youtube'
+                  component={() => (
+                    <Youtube width={width} darkMode={darkMode} />
                   )}
                 />
 
