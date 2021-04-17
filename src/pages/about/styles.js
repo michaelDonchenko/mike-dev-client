@@ -4,9 +4,9 @@ const useStyles = makeStyles((theme) => ({
   flexCenter: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
     margin: theme.spacing(4, 0),
     width: '100%',
+    minHeight: '60vh',
   },
 
   flexDiv: {
@@ -15,25 +15,22 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(4, 0, 12, 0),
   },
 
-  headerDark: {
+  header: {
     margin: theme.spacing(4, 0),
+  },
+
+  modelLinkDark: {
     color: '#ff165d',
+    '&:hover': {
+      cursor: 'pointer',
+    },
   },
 
-  headerLight: {
-    margin: theme.spacing(4, 0),
+  modelLinkLight: {
     color: '#00bcd4',
-  },
-
-  hireButton: {
-    width: '300px',
-    fontSize: '26px',
-    maxWidth: '100%',
-  },
-
-  link: {
-    textDecoration: 'none',
-    margin: theme.spacing(2, 'auto'),
+    '&:hover': {
+      cursor: 'pointer',
+    },
   },
 }))
 

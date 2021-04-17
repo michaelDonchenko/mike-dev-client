@@ -18,7 +18,7 @@ const Youtube = ({ width, darkMode }) => {
         align='center'
         variant={width < 700 ? 'h5' : 'h4'}
       >
-        My Youtube
+        My Youtube channel
       </Typography>
       <Typography variant='h6' align='center'>
         Coming soon...

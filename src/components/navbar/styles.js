@@ -76,14 +76,14 @@ const useStyles = makeStyles((theme) => ({
   mobileNavLinkDark: {
     color: 'white',
     textDecoration: 'none',
-    fontSize: '22px',
+    fontSize: '26px',
     margin: theme.spacing(4, 0),
   },
 
   mobileNavLinkLight: {
     color: '#00bcd4',
     textDecoration: 'none',
-    fontSize: '22px',
+    fontSize: '26px',
     margin: theme.spacing(4, 0),
   },
 }))

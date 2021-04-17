@@ -28,7 +28,12 @@ const ProjectCard = ({ project }) => {
           </Typography>
 
           <div className={classes.buttonsDiv}>
-            <a href={demoLink} target='_blank' className={classes.link}>
+            <a
+              href={demoLink}
+              target='_blank'
+              className={classes.link}
+              rel='noreferrer'
+            >
               <Button
                 className={classes.button}
                 variant='outlined'
@@ -38,7 +43,12 @@ const ProjectCard = ({ project }) => {
               </Button>
             </a>
 
-            <a href={githubLink} target='_blank' className={classes.link}>
+            <a
+              href={githubLink}
+              target='_blank'
+              className={classes.link}
+              rel='noreferrer'
+            >
               <Button
                 className={classes.button}
                 variant='outlined'

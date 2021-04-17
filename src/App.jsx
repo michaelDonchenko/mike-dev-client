@@ -13,6 +13,12 @@ import Projects from './pages/projects/Projects'
 import { AnimatePresence } from 'framer-motion'
 import Footer from './components/footer/Footer'
 import Youtube from './pages/youtube/Youtube'
+import Contact from './pages/contact/Contact'
+import About from './pages/about/About'
+import { AuthContext } from './context/authContext'
+import { getMessages } from './controllers/message'
+import AdminRoute from './components/routes/AdminRoute'
+import AdminPannel from './pages/admin/AdminPannel'
 
 const App = () => {
   const { state } = useContext(DarkModeContext)
@@ -20,12 +26,20 @@ const App = () => {
   const classes = styles()
   const [width, setWidth] = useState(window.innerWidth)
 
+  //auth context
+  const { state: authState } = useContext(AuthContext)
+  const { user } = authState
+
   const handleWithChange = () => {
     setWidth(window.innerWidth)
   }
 
   useEffect(() => {
     window.addEventListener('resize', handleWithChange)
+  }, [])
+
+  useEffect(() => {
+    getMessages()
   }, [])
 
   return (
@@ -58,6 +72,28 @@ const App = () => {
                   path='/youtube'
                   component={() => (
                     <Youtube width={width} darkMode={darkMode} />
+                  )}
+                />
+
+                <Route
+                  exact
+                  path='/contact'
+                  component={() => (
+                    <Contact width={width} darkMode={darkMode} />
+                  )}
+                />
+
+                <Route
+                  exact
+                  path='/about'
+                  component={() => <About width={width} darkMode={darkMode} />}
+                />
+
+                <AdminRoute
+                  exact
+                  path='/admin-pannel'
+                  component={() => (
+                    <AdminPannel width={width} darkMode={darkMode} />
                   )}
                 />
 

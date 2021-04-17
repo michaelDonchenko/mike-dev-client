@@ -1,4 +1,3 @@
-import shopList from '../images/shopList.PNG'
 import olgaJewelry from '../images/olgaJewelry.PNG'
 import mikesBlog from '../images/mikesBlog.PNG'
 
