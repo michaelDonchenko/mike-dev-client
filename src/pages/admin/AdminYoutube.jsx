@@ -1,0 +1,22 @@
+import React from 'react'
+import AdminNav from '../../components/admin-nav/AdminNav'
+import styles from './styles'
+import { motion } from 'framer-motion'
+
+const AdminYoutube = () => {
+  const classes = styles()
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.8 }}
+      className={classes.main}
+    >
+      <AdminNav />
+      <p>Coming later...</p>
+    </motion.div>
+  )
+}
+
+export default AdminYoutube

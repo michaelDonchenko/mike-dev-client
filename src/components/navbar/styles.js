@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   lightNav: {
     padding: 0,
     margin: 0,
-    backgroundColor: '#fafafa',
+    backgroundColor: '#f5f5f5',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',

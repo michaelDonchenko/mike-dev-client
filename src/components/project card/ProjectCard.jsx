@@ -36,7 +36,7 @@ const ProjectCard = ({ project }) => {
             >
               <Button
                 className={classes.button}
-                variant='outlined'
+                variant='contained'
                 color='primary'
               >
                 Live demo

@@ -14,41 +14,24 @@ import Cookies from 'universal-cookie'
 import { useHistory } from 'react-router-dom'
 
 const LoginModel = ({ open, handleClose, classes }) => {
-  const { dispatch, state } = useContext(AuthContext)
-  const { user } = state
+  const { dispatch } = useContext(AuthContext)
   const cookies = new Cookies()
-
-  const history = useHistory()
-
-  if (user && user.role === 'admin') {
-    history.push('/admin-pannel')
-  }
 
   const [values, setValues] = useState({
     username: '',
     password: '',
     loading: false,
     error: false,
-    success: false,
   })
 
-  const { username, password, loading, error, success } = values
+  const { username, password, loading, error } = values
+  const history = useHistory()
 
   const errorDisplay = () => {
     if (error) {
       return (
         <Alert style={{ margin: '10px' }} severity='error'>
           {error}
-        </Alert>
-      )
-    }
-  }
-
-  const successDisplay = () => {
-    if (success) {
-      return (
-        <Alert style={{ margin: '10px' }} severity='success'>
-          {success}
         </Alert>
       )
     }
@@ -72,9 +55,11 @@ const LoginModel = ({ open, handleClose, classes }) => {
         username: '',
         password: '',
         loading: false,
-        success: response.data.message,
         error: false,
       })
+
+      handleClose()
+      history.push('/admin-pannel')
     } catch (error) {
       setValues({
         ...values,
@@ -134,11 +119,11 @@ const LoginModel = ({ open, handleClose, classes }) => {
             }
           />
         </form>
-        {successDisplay()}
+
         {errorDisplay()}
       </DialogContent>
       <DialogActions>
-        <Button variant='outlined' onClick={handleLogin} color='primary'>
+        <Button variant='contained' onClick={handleLogin} color='primary'>
           {loading ? 'Loading...' : 'Login'}
         </Button>
         <Button

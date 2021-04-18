@@ -15,31 +15,31 @@ import Footer from './components/footer/Footer'
 import Youtube from './pages/youtube/Youtube'
 import Contact from './pages/contact/Contact'
 import About from './pages/about/About'
-import { AuthContext } from './context/authContext'
-import { getMessages } from './controllers/message'
 import AdminRoute from './components/routes/AdminRoute'
 import AdminPannel from './pages/admin/AdminPannel'
+import AdminYoutube from './pages/admin/AdminYoutube'
 
 const App = () => {
   const { state } = useContext(DarkModeContext)
   const { darkMode } = state
   const classes = styles()
-  const [width, setWidth] = useState(window.innerWidth)
 
-  //auth context
-  const { state: authState } = useContext(AuthContext)
-  const { user } = authState
+  const [width, setWidth] = useState(window.innerWidth)
 
   const handleWithChange = () => {
     setWidth(window.innerWidth)
   }
 
   useEffect(() => {
-    window.addEventListener('resize', handleWithChange)
-  }, [])
+    let resizeId
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeId)
+      resizeId = setTimeout(doneResizing, 1000)
+    })
 
-  useEffect(() => {
-    getMessages()
+    function doneResizing() {
+      handleWithChange()
+    }
   }, [])
 
   return (
@@ -92,9 +92,13 @@ const App = () => {
                 <AdminRoute
                   exact
                   path='/admin-pannel'
-                  component={() => (
-                    <AdminPannel width={width} darkMode={darkMode} />
-                  )}
+                  component={() => <AdminPannel darkMode={darkMode} />}
+                />
+
+                <AdminRoute
+                  exact
+                  path='/admin-youtube'
+                  component={() => <AdminYoutube darkMode={darkMode} />}
                 />
 
                 <Footer />
