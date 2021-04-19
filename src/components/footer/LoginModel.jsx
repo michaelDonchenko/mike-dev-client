@@ -13,7 +13,7 @@ import { AuthContext } from '../../context/authContext'
 import Cookies from 'universal-cookie'
 import { useHistory } from 'react-router-dom'
 
-const LoginModel = ({ open, handleClose, classes }) => {
+const LoginModel = ({ open, handleClose, classes, width }) => {
   const { dispatch } = useContext(AuthContext)
   const cookies = new Cookies()
 
@@ -82,6 +82,7 @@ const LoginModel = ({ open, handleClose, classes }) => {
       fullWidth={true}
       open={open}
       onClose={handleClose}
+      fullScreen={width <= 600}
       aria-labelledby='alert-dialog-title'
       aria-describedby='alert-dialog-description'
     >

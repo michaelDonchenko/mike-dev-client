@@ -6,7 +6,7 @@ import LoginModel from './LoginModel'
 import styles from './styles'
 import { Link } from 'react-router-dom'
 
-const Footer = () => {
+const Footer = ({ width }) => {
   const { state } = useContext(DarkModeContext)
   const { darkMode } = state
   const classes = styles()
@@ -53,7 +53,12 @@ const Footer = () => {
         </p>
       </div>
 
-      <LoginModel open={open} handleClose={handleClose} classes={classes} />
+      <LoginModel
+        open={open}
+        handleClose={handleClose}
+        classes={classes}
+        width={width}
+      />
     </>
   )
 }

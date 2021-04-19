@@ -18,6 +18,7 @@ import About from './pages/about/About'
 import AdminRoute from './components/routes/AdminRoute'
 import AdminPannel from './pages/admin/AdminPannel'
 import AdminYoutube from './pages/admin/AdminYoutube'
+import ScrollToTop from './components/scrollTop/ScrollTop'
 
 const App = () => {
   const { state } = useContext(DarkModeContext)
@@ -46,6 +47,7 @@ const App = () => {
     <Router>
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <CssBaseline />
+        <ScrollToTop />
         <Navbar />
 
         <AnimatePresence>
@@ -101,7 +103,7 @@ const App = () => {
                   component={() => <AdminYoutube darkMode={darkMode} />}
                 />
 
-                <Footer />
+                <Footer width={width} />
               </Container>
             </main>
           </Switch>

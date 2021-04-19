@@ -26,7 +26,7 @@ const AboutModel = ({ width, aboutModel, aboutMeClose }) => {
 
       <div className={classes.aboutDiv}>
         <p>
-          Hi my name is Michael Donchenko, I am 27 years old from tel-aviv, A
+          Hi my name is Michael Donchenko, I am 27 years old from Tel-aviv, A
           self taught full stack (MERN) web developer.
         </p>
         <p>
@@ -35,7 +35,7 @@ const AboutModel = ({ width, aboutModel, aboutMeClose }) => {
           cool people and had a lot of fun.
         </p>
         <p>
-          When i decided to switch my career to high tech at first i didn't know
+          When I decided to switch my career to high tech at first I didn't know
           much about programming. I went to study cyber security like my friend
           did but didn't enjoy it at all. Then during the cyber course we had
           some programming with python, I really liked it and got interested
