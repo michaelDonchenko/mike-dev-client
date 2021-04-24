@@ -16,13 +16,23 @@ const styles = makeStyles((theme) => ({
   },
 
   headerDark: {
-    margin: theme.spacing(4, 0, 8, 0),
+    margin: theme.spacing(4, 0),
     color: '#ff165d',
   },
 
   headerLight: {
-    margin: theme.spacing(4, 0, 8, 0),
+    margin: theme.spacing(4, 0),
     color: '#00bcd4',
+  },
+
+  playlistDiv: {
+    padding: theme.spacing(2),
+    marginBottom: theme.spacing(4),
+  },
+
+  link: {
+    textDecoration: 'none',
+    display: 'inline-block',
   },
 }))
 

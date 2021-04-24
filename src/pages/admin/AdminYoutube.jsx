@@ -2,9 +2,13 @@ import React from 'react'
 import AdminNav from '../../components/admin-nav/AdminNav'
 import styles from './styles'
 import { motion } from 'framer-motion'
+import { Grid } from '@material-ui/core'
+import PlaylistGrid from './PlaylistGrid'
+import VideosGrid from './VideosGrid'
 
-const AdminYoutube = () => {
+const AdminYoutube = ({ width }) => {
   const classes = styles()
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -14,7 +18,11 @@ const AdminYoutube = () => {
       className={classes.main}
     >
       <AdminNav />
-      <p>Coming later...</p>
+      <Grid container>
+        <PlaylistGrid width={width} />
+
+        <VideosGrid width={width} />
+      </Grid>
     </motion.div>
   )
 }

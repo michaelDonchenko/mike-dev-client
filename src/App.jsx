@@ -19,6 +19,9 @@ import AdminRoute from './components/routes/AdminRoute'
 import AdminPannel from './pages/admin/AdminPannel'
 import AdminYoutube from './pages/admin/AdminYoutube'
 import ScrollToTop from './components/scrollTop/ScrollTop'
+import YoutubeVideos from './pages/youtube/YoutubeVideos'
+import YoutubePlaylists from './pages/youtube/YoutubePlaylists'
+import PlaylistPage from './pages/youtube/PlaylistPage'
 
 const App = () => {
   const { state } = useContext(DarkModeContext)
@@ -79,6 +82,30 @@ const App = () => {
 
                 <Route
                   exact
+                  path='/youtube/videos'
+                  component={() => (
+                    <YoutubeVideos width={width} darkMode={darkMode} />
+                  )}
+                />
+
+                <Route
+                  exact
+                  path='/youtube/playlists'
+                  component={() => (
+                    <YoutubePlaylists width={width} darkMode={darkMode} />
+                  )}
+                />
+
+                <Route
+                  exact
+                  path='/youtube/playlists/:id'
+                  component={() => (
+                    <PlaylistPage width={width} darkMode={darkMode} />
+                  )}
+                />
+
+                <Route
+                  exact
                   path='/contact'
                   component={() => (
                     <Contact width={width} darkMode={darkMode} />
@@ -94,13 +121,17 @@ const App = () => {
                 <AdminRoute
                   exact
                   path='/admin-pannel'
-                  component={() => <AdminPannel darkMode={darkMode} />}
+                  component={() => (
+                    <AdminPannel darkMode={darkMode} width={width} />
+                  )}
                 />
 
                 <AdminRoute
                   exact
                   path='/admin-youtube'
-                  component={() => <AdminYoutube darkMode={darkMode} />}
+                  component={() => (
+                    <AdminYoutube darkMode={darkMode} width={width} />
+                  )}
                 />
 
                 <Footer width={width} />
