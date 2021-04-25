@@ -1,14 +1,16 @@
-import { Toolbar } from '@material-ui/core'
+import { Button, Toolbar } from '@material-ui/core'
 import React, { useContext } from 'react'
 import styles from './styles'
 import { DarkModeContext } from '../../context/themeContext'
 import Tooltip from '@material-ui/core/Tooltip'
 import { motion } from 'framer-motion'
+import CV from '../../utils/myCV.pdf'
 
-const SocialMediaBar = () => {
+const SocialMediaBar = ({ width }) => {
   const classes = styles()
   const { state } = useContext(DarkModeContext)
   const { darkMode } = state
+
   return (
     <Toolbar className={classes.toolBar}>
       <Tooltip placement='left-start' title='Linkedin'>
@@ -52,6 +54,18 @@ const SocialMediaBar = () => {
           <i class='fab fa-youtube'></i>
         </motion.a>
       </Tooltip>
+
+      <span style={{ flex: 1 }}></span>
+
+      <a href={CV} target='_blank' className={classes.link}>
+        <Button
+          variant='outlined'
+          color='secondary'
+          className={width < 415 ? classes.buttonCV : null}
+        >
+          download my CV
+        </Button>
+      </a>
     </Toolbar>
   )
 }

@@ -27,6 +27,14 @@ const useStyles = makeStyles((theme) => ({
       color: '#00bcd4',
     },
   },
+
+  link: {
+    textDecoration: 'none',
+  },
+
+  buttonCV: {
+    marginTop: theme.spacing(4),
+  },
 }))
 
 export default useStyles

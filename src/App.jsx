@@ -57,7 +57,7 @@ const App = () => {
           <Switch>
             <main className={darkMode ? classes.dark : classes.light}>
               <Container className={classes.mainContainer} maxWidth='lg'>
-                <SocialMediaBar />
+                <SocialMediaBar width={width} />
 
                 <Route
                   exact
