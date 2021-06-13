@@ -1,8 +1,17 @@
 import olgaJewelry from '../images/olgaJewelry.PNG'
 import mikesBlog from '../images/mikesBlog.PNG'
 import travelApp from '../images/travelApp.PNG'
+import animalsApp from '../images/animalsAdoption.PNG'
 
 const projects = [
+  {
+    projectTitle: 'Animals adoption site',
+    projectText:
+      'This website was mede with PERN stack postrgresql with sequlize for database, redux toolkit for state management, and nodejs with react as front and back. The main features here are a lot of filtering and sorting options on the adoption page, you can basically filter the posts by any parameter. Full auth system based on JWT and cookies, working admin dashboard with posts histroy and change/delete functions.',
+    img: animalsApp,
+    demoLink: 'https://animals-adoption.netlify.app/',
+    githubLink: 'https://github.com/michaelDonchenko/Animals-adoption-client',
+  },
   {
     projectTitle: 'Travel app',
     projectText:
