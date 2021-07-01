@@ -2,7 +2,7 @@ import { Typography } from '@material-ui/core'
 import React from 'react'
 import styles from './styles'
 import { motion } from 'framer-motion'
-import YoutubeNav from '../../components/youtubeNav/YoutubeNav'
+import YoutubeVideos from './YoutubeVideos'
 
 const Youtube = ({ width, darkMode }) => {
   const classes = styles()
@@ -21,7 +21,7 @@ const Youtube = ({ width, darkMode }) => {
       >
         My Youtube channel
       </Typography>
-      <YoutubeNav darkMode={darkMode} />
+      <YoutubeVideos />
     </motion.div>
   )
 }

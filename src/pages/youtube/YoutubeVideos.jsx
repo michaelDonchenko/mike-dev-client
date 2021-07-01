@@ -2,7 +2,6 @@ import { Typography } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import styles from './styles'
 import { motion } from 'framer-motion'
-import YoutubeNav from '../../components/youtubeNav/YoutubeNav'
 import VideosContainer from '../../components/videosContainer/VideosContainer'
 import { getVideos } from '../../controllers/youtube'
 import Alert from '@material-ui/lab/Alert'
@@ -60,15 +59,6 @@ const YoutubeVideos = ({ width, darkMode }) => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <Typography
-          className={darkMode ? classes.headerDark : classes.headerLight}
-          align='center'
-          variant={width < 700 ? 'h5' : 'h4'}
-        >
-          My Youtube channel
-        </Typography>
-        <YoutubeNav darkMode={darkMode} />
-
         {errorDisplay()}
 
         {loading ? (
