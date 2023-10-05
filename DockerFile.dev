@@ -1,0 +1,21 @@
+# Use the official MongoDB base image
+FROM mongo:latest
+
+# Optional: Set environment variables if needed
+ENV MONGO_INITDB_ROOT_USERNAME=admin
+ENV MONGO_INITDB_ROOT_PASSWORD=password
+
+# Optional: Copy a custom MongoDB configuration file if needed
+# COPY ./mongod.conf /etc/mongod.conf
+
+# Optional: Create a directory for storing data (e.g., databases)
+# RUN mkdir -p /data/db
+
+# Optional: Set the working directory
+# WORKDIR /usr/src/app
+
+# Expose MongoDB port (27017 is the default MongoDB port)
+EXPOSE 27017
+
+# Optional: Command to run MongoDB
+CMD ["mongod"]
